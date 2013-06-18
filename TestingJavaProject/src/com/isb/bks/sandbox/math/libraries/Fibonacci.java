@@ -20,7 +20,7 @@ public class Fibonacci {
 	 * @return list of numbers
 	 */
 	public static List<Integer> findUpTo(int max) {
-		List<Integer> ret = new ArrayList<>();
+		List<Integer> ret = new ArrayList<Integer>();
 
 		int num = 0, fibNum = 0;
 
