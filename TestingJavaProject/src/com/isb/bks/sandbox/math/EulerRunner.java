@@ -21,7 +21,9 @@ public class EulerRunner {
 					System.out.println(problem.execute());
 					long next = System.nanoTime();
 					System.out.println("Time: " + (next - act) / (1000 * 1000 * 1000));
-				} catch (InstantiationException | IllegalAccessException e) {
+				} catch (InstantiationException ex1) {
+					System.out.println("Cannot find class Euler" + number + " with an empty, public constructor");
+				} catch (IllegalAccessException ex2) {
 					System.out.println("Cannot find class Euler" + number + " with an empty, public constructor");
 				} catch (ClassNotFoundException e) {
 					System.out.println("Cannot find class Euler" + number);

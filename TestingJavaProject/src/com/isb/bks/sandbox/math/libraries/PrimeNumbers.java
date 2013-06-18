@@ -12,7 +12,7 @@ public class PrimeNumbers {
 	private static final BigInteger THREE = BigInteger.valueOf(3);
 	private static final BigInteger FOUR = BigInteger.valueOf(4);
 
-	private static List<BigInteger> primes = new ArrayList<>();
+	private static List<BigInteger> primes = new ArrayList();
 
 	/**
 	 * Returns a list of the prime factors of a given number
@@ -26,7 +26,7 @@ public class PrimeNumbers {
 		BigInteger sqrt = sqrt(new BigDecimal(number), 1).toBigInteger();
 		preCalculateUpTo(sqrt);
 		BigInteger n = number;
-		List<BigInteger> factors = new ArrayList<>();
+		List<BigInteger> factors = new ArrayList();
 		BigInteger i = getPrimeNumber(1);
 		for (int index = 1; sqrt.compareTo(i) > 0; index++) {
 			while (n.remainder(i).equals(BigInteger.ZERO)) {
