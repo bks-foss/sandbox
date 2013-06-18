@@ -9,6 +9,8 @@ public class Euler1 implements EulerProblem {
 		int mult3 = 3, mult5 = 5;
 		int acum = 0;
 
+		// Dioooooooooooooooooos
+
 		while (mult3 < 1000 || mult5 < 1000) {
 			if (mult3 < mult5) {
 				acum += mult3;
