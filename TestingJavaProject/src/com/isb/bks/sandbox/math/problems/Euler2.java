@@ -1,24 +1,19 @@
 package com.isb.bks.sandbox.math.problems;
 
+import java.util.List;
+
 import com.isb.bks.sandbox.math.EulerProblem;
+import com.isb.bks.sandbox.math.libraries.Fibonacci;
 
 public class Euler2 implements EulerProblem {
 
 	@Override
 	public String execute() {
-		int mult3 = 3, mult5 = 5;
+		List<Integer> fibs = Fibonacci.findUpTo(4000000);
 		int acum = 0;
-
-		while (mult3 < 1000 || mult5 < 1000) {
-			if (mult3 < mult5) {
-				acum += mult3;
-				mult3 += 3;
-			} else {
-				acum += mult5;
-				mult5 += 5;
-			}
-			if (mult3 == mult5) {
-				mult3 += 3;
+		for (int fib : fibs) {
+			if (fib % 2 == 0) {
+				acum += fib;
 			}
 		}
 		return String.valueOf(acum);
