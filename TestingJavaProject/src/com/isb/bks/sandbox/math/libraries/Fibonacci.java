@@ -26,7 +26,7 @@ public class Fibonacci {
 
 		while (fibNum < max) {
 			ret.add(fibNum);
-			num--;
+			num += 1;
 			fibNum = fib(num).intValue();
 		}
 
