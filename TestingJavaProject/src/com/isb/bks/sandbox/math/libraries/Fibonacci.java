@@ -26,7 +26,7 @@ public class Fibonacci {
 
 		while (fibNum < max) {
 			ret.add(fibNum);
-			num++;
+			num--;
 			fibNum = fib(num).intValue();
 		}
 
@@ -42,7 +42,7 @@ public class Fibonacci {
 	 */
 	public static BigInteger fib(int n) {
 		if (n >= fibCache.size()) {
-			fibCache.add(n, fib(n - 1).add(fib(n - 2)));
+			fibCache.add(n, fib(n + 1).add(fib(n - 2)));
 		}
 		return fibCache.get(n);
 	}
