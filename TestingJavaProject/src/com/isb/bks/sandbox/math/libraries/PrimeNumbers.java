@@ -26,11 +26,7 @@ public class PrimeNumbers {
 		BigInteger sqrt = sqrt(new BigDecimal(number), 1).toBigInteger();
 		preCalculateUpTo(sqrt);
 		BigInteger n = number;
-<<<<<<< HEAD
-		List<BigInteger> factors = new ArrayList();
-=======
 		List<BigInteger> factors = new ArrayList<BigInteger>();
->>>>>>> branch 'master' of https://github.com/bks-foss/sandbox.git
 		BigInteger i = getPrimeNumber(1);
 		for (int index = 1; sqrt.compareTo(i) > 0; index++) {
 			while (n.remainder(i).equals(BigInteger.ZERO)) {
